@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "DGG Bigscreen Revived",
+    "description": "Automatically inserts Destiny's YouTube livestream into the DGG Bigscreen.",
+    "version": "1.0",
+    "permissions": [
+        "https://youtube.com/channel/@destiny/live",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://www.destiny.gg/bigscreen"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}
