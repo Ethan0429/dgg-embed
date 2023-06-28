@@ -8,7 +8,7 @@
         "scripting"
     ],
     "host_permissions": [
-        "https://www.destiny.gg/bigscreen",
+        "https://www.destiny.gg/bigscreen"
     ],
     "background": {
         "service_worker": "background.js"
