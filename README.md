@@ -19,3 +19,7 @@ If you don't want to use the Chrome Web Store, you can install the extension loc
 5. Select Your Extension's Directory: A file dialog will open. Navigate to the directory where your extension files are, and click "Select." Make sure you select the directory itself, not an individual file.
 
 After performing these steps, your extension should now be loaded and active in Chrome. You can see it listed at the top of the Extensions page, and depending on your extension's settings, it may also show up next to the address bar or in the Chrome menu.
+
+## For Firefox Users
+
+~ coming soon ~
