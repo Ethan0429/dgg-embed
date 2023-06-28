@@ -4,12 +4,11 @@
     "description": "Automatically inserts Destiny's YouTube livestream into the DGG Bigscreen.",
     "version": "1.0",
     "permissions": [
-        "https://youtube.com/channel/@destiny/live",
         "activeTab",
         "scripting"
     ],
     "host_permissions": [
-        "https://www.destiny.gg/bigscreen"
+        "https://www.destiny.gg/bigscreen",
     ],
     "background": {
         "service_worker": "background.js"
