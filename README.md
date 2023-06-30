@@ -4,6 +4,13 @@ Simple Chrome extension that embeds https://www.youtube.com/@destiny/live into t
 
 ## For Chrome Users
 
+### Chrome Web Store
+
+The easiest way to install the extension is through the Chrome Web Store.
+
+[![Static Badge](https://img.shields.io/badge/Chrome%20Web%20Store-Download-brightgreen?style=for-the-badge&logo=googlechrome&logoColor=white&link=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fdgg-bigscreen-revived%2Fjnplbgjadchfjhmaoolcmagiikohcklh%3Fhl%3Den%26authuser%3D0)](https://chrome.google.com/webstore/detail/dgg-bigscreen-revived/jnplbgjadchfjhmaoolcmagiikohcklh?hl=en&authuser=0)
+
+
 ### Local Installation
 
 If you don't want to use the Chrome Web Store, you can install the extension locally:
