@@ -1,6 +1,6 @@
 # About
 
-Simple Chrome extension that embeds https://www.youtube.com/@destiny/live into the https://www.destiny.gg/bigscreen, following the removal of it stipulated by Destiny's new contract with Kick.
+Simple Chrome extension/Firefox addon that embeds https://www.youtube.com/@destiny/live into the https://www.destiny.gg/bigscreen, following the removal of it stipulated by Destiny's new contract with Kick.
 
 ## For Chrome Users
 
@@ -29,4 +29,20 @@ After performing these steps, your extension should now be loaded and active in 
 
 ## For Firefox Users
 
-~ coming soon ~
+### Firefox Add-ons
+
+The easiest way to install the extension is through the Firefox Add-ons.
+
+[![Static Badge](https://img.shields.io/badge/Firefox%20Add--ons-Download-brightgreen?style=for-the-badge&logo=firefox&logoColor=white&link=https%3A%2F%2Faddons.mozilla.org%2Fen-US%2Ffirefox%2Faddon%2Fdgg-bigscreen-revived%2F)](https://addons.mozilla.org/en-US/firefox/addon/dgg-bigscreen-revived/)
+
+### Local Installation
+
+If you don't want to use the Firefox Add-ons, you can install the extension locally:
+
+1. Prepare Your Extension Files: Make sure your extension's files (HTML, CSS, JavaScript, images, etc.) are properly organized in one directory. This includes the manifest.json file, which is necessary for the extension to work.
+
+2. Navigate to `about:debugging` - You can do this by typing `about:debugging` in the address bar and hit enter.
+
+3. Click "Load Temporary Add-on" - A file dialog will open. Navigate to the directory containing all the files in `firefox/`, and select the `manifest.json` file.
+
+After performing these steps, your extension should now be loaded and active in Firefox. You can see it listed at the top of the Extensions page, and depending on your extension's settings, it may also show up next to the address bar or in the Firefox menu.
