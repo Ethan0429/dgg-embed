@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            min-width: 200px;
+        }
+
+        #content {
+            padding: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select,
+        button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        select {
+            background: white;
+        }
+
+        button {
+            color: white;
+            background: #3f51b5;
+            /* Feel free to change the color */
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #303f9f;
+            /* Darker shade for hover effect */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <label for="platform">Choose a platform:</label>
+        <select name="platform" id="platform">
+            <option value="youtube">YouTube</option>
+            <option value="kick">Kick</option>
+        </select>
+        <button id="save">Save</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
