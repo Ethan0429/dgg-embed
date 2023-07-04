@@ -5,8 +5,8 @@
     "version": "1.2",
     "browser_specific_settings": {
         "gecko": {
-            "id": "dgg-embed@knowyourinfluencer.io",
-            "strict_min_version": "42.0]"
+            "id": "{ebb57a72-ffd9-4e2d-8b14-b1c02a197148}",
+            "strict_min_version": "42.0"
         }
     },
     "browser_action": {
@@ -16,7 +16,7 @@
         "activeTab",
         "storage",
         "tabs",
-        "<all_urls>"
+        "<all_urls>",
     ],
     "background": {
         "scripts": [
