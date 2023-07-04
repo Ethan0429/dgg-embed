@@ -2,6 +2,9 @@
 
 [![Static Badge](https://img.shields.io/badge/Chrome%20Web%20Store-Active-blue?style=flat&logo=googlechrome&logoColor=white&link=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fdgg-bigscreen-revived%2Fjnplbgjadchfjhmaoolcmagiikohcklh%3Fhl%3Den%26authuser%3D0)](https://chrome.google.com/webstore/detail/dgg-bigscreen-revived/jnplbgjadchfjhmaoolcmagiikohcklh?hl=en&authuser=0) [![Static Badge](https://img.shields.io/badge/Firefox%20Add--ons-Active-blue?style=flat&logo=firefox&logoColor=white&link=https%3A%2F%2Faddons.mozilla.org%2Fen-US%2Ffirefox%2Faddon%2Fdgg-bigscreen-revived%2F)](https://addons.mozilla.org/en-US/firefox/addon/dgg-bigscreen-revived/)
 
+![](https://img.shields.io/chrome-web-store/rating/jnplbgjadchfjhmaoolcmagiikohcklh?color=blue&style=flat&logo=appveyor&logoColor=white) ![](https://img.shields.io/chrome-web-store/users/jnplbgjadchfjhmaoolcmagiikohcklh?color=blue&label=Active%20Users&style=flat&logo=appveyor&logoColor=white)
+
+
 Simple Chrome extension/Firefox addon that embeds https://www.youtube.com/@destiny/live into the https://www.destiny.gg/bigscreen, following the removal of it stipulated by Destiny's new contract with Kick.
 
 ## For Chrome Users
