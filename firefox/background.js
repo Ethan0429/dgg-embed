@@ -11,46 +11,65 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   }
 });
 
-function embedVideo(platform) {
+async function embedVideo(platform) {
   // embedVideo function definition here
   const destinyChannelId = "UC554eY5jNUfDq3yDOJYirOQ";
   const destinyKickId = "destiny"; // Replace with actual Twitch ID
-  let embedElement = document.getElementById("embed");
+  const destinyLiveWs = "https://www.destiny.gg/api/info/stream";
 
-  if (embedElement) {
-    console.log("Removing existing embed element");
-    embedElement.remove();
+  // Check stream live webservice to see if he's live on currently selected platform
+  const response = await fetch(destinyLiveWs);
+  const liveJson = await response.json();
+  let streams = liveJson.data.streams;
+  let live = false;
+  for (let key in streams) {
+    if (key === platform) {
+      let stream = streams[key];
+      if (stream != null) {
+        live = live || stream.live;
+      }
+    }
   }
 
-  embedElement = document.createElement("div");
-  embedElement.id = "dgg-embed";
-  embedElement.style.width = "100%";
-  embedElement.style.height = "auto";
-  embedElement.style.aspectRatio = "16 / 9";
+  // Only embed if stream is live
+  if (live) {
+    let embedElement = document.getElementById("embed");
 
-  const iframe = document.createElement("iframe");
-  iframe.style.width = "100%";
-  iframe.style.height = "100%";
-  iframe.style.position = "relative"; // Required for z-index to work
-  iframe.style.zIndex = "9999"; // Bring to the forefront
-  iframe.frameBorder = "0";
+    if (embedElement) {
+      console.log("Removing existing embed element");
+      embedElement.remove();
+    }
 
-  // Set the source of the iframe based on the platform
-  if (platform === "youtube") {
-    iframe.src = `https://www.youtube.com/embed/live_stream?channel=${destinyChannelId}`;
-  } else if (platform === "kick") {
-    iframe.src = `https://player.kick.com/${destinyKickId}`;
-  } else {
-    console.error("Unknown platform: " + platform);
-    return;
-  }
+    embedElement = document.createElement("div");
+    embedElement.id = "dgg-embed";
+    embedElement.style.width = "100%";
+    embedElement.style.height = "auto";
+    embedElement.style.aspectRatio = "16 / 9";
 
-  embedElement.appendChild(iframe);
+    const iframe = document.createElement("iframe");
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.position = "relative"; // Required for z-index to work
+    iframe.style.zIndex = "9999"; // Bring to the forefront
+    iframe.frameBorder = "0";
 
-  const streamWrapElement = document.getElementById("stream-wrap");
-  if (streamWrapElement) {
-    streamWrapElement.appendChild(embedElement);
-  } else {
-    console.error("stream-wrap element not found");
+    // Set the source of the iframe based on the platform
+    if (platform === "youtube") {
+      iframe.src = `https://www.youtube.com/embed/live_stream?channel=${destinyChannelId}`;
+    } else if (platform === "kick") {
+      iframe.src = `https://player.kick.com/${destinyKickId}`;
+    } else {
+      console.error("Unknown platform: " + platform);
+      return;
+    }
+
+    embedElement.appendChild(iframe);
+
+    const streamWrapElement = document.getElementById("stream-wrap");
+    if (streamWrapElement) {
+      streamWrapElement.appendChild(embedElement);
+    } else {
+      console.error("stream-wrap element not found");
+    }
   }
 }
