@@ -14,29 +14,23 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
               const destinyKickId = "destiny"; // Replace with actual Twitch ID
               const destinyLiveWs = "https://www.destiny.gg/api/info/stream";
 
+              let embedElement = document.getElementById("embed");
+              if (embedElement) {
+                console.log("Removing existing embed element");
+                embedElement.remove();
+              }
+
               // Check stream live webservice to see if he's live on currently selected platform
               const response = await fetch(destinyLiveWs);
               const liveJson = await response.json();
-              let streams = liveJson.data.streams;
+              let stream = liveJson.data.streams[platform];
               let live = false;
-              for (let key in streams) {
-                if (key === platform) {
-                  let stream = streams[key];
-                  if (stream != null) {
-                    live = live || stream.live;
-                  }
-                }
+              if (stream != null) {
+                live = stream.live;
               }
 
               // Only embed if stream is live
               if (live) {
-                let embedElement = document.getElementById("embed");
-
-                if (embedElement) {
-                  console.log("Removing existing embed element");
-                  embedElement.remove();
-                }
-
                 embedElement = document.createElement("div");
                 embedElement.id = "dgg-embed";
                 embedElement.style.width = "100%";
