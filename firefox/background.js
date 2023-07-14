@@ -17,12 +17,6 @@ async function embedVideo(platform) {
   const destinyKickId = "destiny"; // Replace with actual Twitch ID
   const destinyLiveWs = "https://www.destiny.gg/api/info/stream";
 
-  let embedElement = document.getElementById("embed");
-  if (embedElement) {
-    console.log("Removing existing embed element");
-    embedElement.remove();
-  }
-
   // Check stream live webservice to see if he's live on currently selected platform
   const response = await fetch(destinyLiveWs);
   const liveJson = await response.json();
@@ -34,6 +28,12 @@ async function embedVideo(platform) {
 
   // Only embed if stream is live
   if (live) {
+    let embedElement = document.getElementById("embed");
+    if (embedElement) {
+      console.log("Removing existing embed element");
+      embedElement.remove();
+    }
+    
     embedElement = document.createElement("div");
     embedElement.id = "dgg-embed";
     embedElement.style.width = "100%";
