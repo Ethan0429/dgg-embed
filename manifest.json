@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "DGG Bigscreen Revived",
     "description": "Automatically inserts Destiny's YouTube livestream into the DGG Bigscreen.",
-    "version": "1.2",
+    "version": "1.3",
     "action": {
         "default_popup": "popup.html"
     },
